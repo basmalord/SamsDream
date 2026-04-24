@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://kx75t4qkotap"]
+
+[ext_resource type="Script" uid="uid://i6e1sj8fd1j4" path="res://PlayerCharacterBase/player_character_body.gd" id="1_564i8"]
+[ext_resource type="Script" uid="uid://gwyc72o7ehyv" path="res://DebugNodes/Player/player_debug.gd" id="2_hst8o"]
+[ext_resource type="Texture2D" uid="uid://nbhvi8sj26h3" path="res://icon.svg" id="3_3nob0"]
+[ext_resource type="PackedScene" uid="uid://mucuopy0bom2" path="res://Dialogue/DialogueUI/text_box.tscn" id="4_bdqsw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufdxq"]
+
+[node name="PlayerCharacterBody" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("1_564i8")
+
+[node name="PlayerCharacterAnimatedSprite" type="AnimatedSprite2D" parent="."]
+
+[node name="PlayerCharacterBox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ufdxq")
+
+[node name="PlayerDebug" type="Node" parent="."]
+script = ExtResource("2_hst8o")
+debug_texture = ExtResource("3_3nob0")
+debug_mode = true
+metadata/_custom_type_script = "uid://gwyc72o7ehyv"
+
+[node name="PlayerUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -19.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 20.0
+
+[node name="DialogueUI" type="Control" parent="PlayerUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextBox" parent="PlayerUI/DialogueUI" instance=ExtResource("4_bdqsw")]
+visible = false
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Camera2D" type="Camera2D" parent="."]

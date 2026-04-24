@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://imjqngluvn8e"]
+
+[ext_resource type="Script" uid="uid://gwyc72o7ehyv" path="res://DebugNodes/Player/player_debug.gd" id="1_3n4qf"]
+
+[node name="PlayerDebug" type="Node"]
+script = ExtResource("1_3n4qf")
+metadata/_custom_type_script = "uid://cj0ahj5j0elia"

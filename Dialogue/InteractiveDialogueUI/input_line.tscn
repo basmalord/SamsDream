@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4c6ns38sseib"]
+
+[ext_resource type="Script" uid="uid://dfnhf8stbixo7" path="res://Dialogue/InteractiveDialogueUI/input_line.gd" id="1_uvy14"]
+
+[node name="InputLine" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_uvy14")

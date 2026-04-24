@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://batocyv2xpfge"]
+
+[ext_resource type="Script" uid="uid://ckje8udvi15xm" path="res://PlayerCharacterBase/Mangers/PlayerCharacterUIManager/player_character_ui_manger.gd" id="1_sm0jh"]
+
+[node name="PlayerCharacterUIManger" type="Node"]
+script = ExtResource("1_sm0jh")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnhfk1330px6k"]
+
+[ext_resource type="Script" uid="uid://dq2fh8xbyir7o" path="res://Interactables/SceneBase/interactable_base_2d.gd" id="1_xnvsj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8n5g"]
+
+[node name="InteractableBase2d" type="Area2D"]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_xnvsj")
+
+[node name="InteractableBox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a8n5g")
+
+[node name="InteractableSprite" type="Sprite2D" parent="."]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://t5xnj07l2cwc"]
+
+[ext_resource type="Script" uid="uid://c1lox5e6jlx0p" path="res://PlayerCharacterBase/Mangers/PlayerCharacterBehaviourManager/player_character_behaviour_manager.gd" id="1_m3cq8"]
+
+[node name="PlayerCharacterBehaviourManager" type="Node"]
+script = ExtResource("1_m3cq8")

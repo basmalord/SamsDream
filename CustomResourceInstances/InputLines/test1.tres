@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://n2peegwb5iah"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_tq05j"]
+
+[resource]
+script = ExtResource("1_tq05j")
+id = "test1"
+output_line_id = "test2"
+text = "this is input test 1"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

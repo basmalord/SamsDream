@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnfecxbmyk4jy"]
+
+[ext_resource type="Script" uid="uid://brhq8ujorv0ue" path="res://UtilityMenus/save_menu.gd" id="1_68x1t"]
+
+[node name="SaveMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68x1t")
+
+[node name="SaveGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 110.0
+offset_bottom = 37.0
+text = "Save Game"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 116.0
+offset_right = 86.0
+offset_bottom = 147.0
+text = "Back"
+
+[node name="SaveGameNameInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 117.0
+offset_bottom = 72.0
+
+[node name="load menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 74.0
+offset_right = 105.0
+offset_bottom = 105.0
+text = "load menu"
+
+[connection signal="pressed" from="SaveGameButton" to="." method="_on_save_game_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="load menu" to="." method="_on_load_menu_pressed"]

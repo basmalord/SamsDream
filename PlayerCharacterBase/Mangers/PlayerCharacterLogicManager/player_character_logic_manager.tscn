@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4clvve01ukun"]
+
+[ext_resource type="Script" uid="uid://bvgn2qud0bv21" path="res://PlayerCharacterBase/Mangers/PlayerCharacterLogicManager/player_character_logic_manager.gd" id="1_045ou"]
+
+[node name="PlayerCharacterLogicManager" type="Node"]
+script = ExtResource("1_045ou")
