@@ -24,4 +24,5 @@ offset_right = 87.0
 offset_bottom = 129.0
 text = "Load"
 
+[connection signal="item_selected" from="LoadListContainer" to="." method="_on_load_list_container_item_selected"]
 [connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]

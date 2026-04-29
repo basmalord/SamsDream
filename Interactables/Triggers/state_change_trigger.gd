@@ -13,12 +13,11 @@ func _enter_trigger(triggering_body):
 		return
 	player_body = triggering_body.get_parent()
 
+func _exit_trigger(_triggering_body):
+	player_body = null
+	is_inside_area = false
 
-
-func _exit_trigger(triggering_body):
-	pass
-
-func _input_trigger(triggering_body):
+func _input_trigger(_triggering_body):
 	if automatic_enter_trigger:
 		return
 	if Input.is_action_just_pressed(interact_input):
@@ -29,9 +28,7 @@ func _alter_state_trigger():
 	my_interactable = get_parent()
 	my_interactable.state_tracker._flip_state()
 
-
-
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !is_inside_area or interact_trigger_activated:
 		return
 	_input_trigger(player_body)

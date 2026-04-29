@@ -9,10 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://m6pysg2m0ann" path="res://Resources/SpriteSheets/ObstacleSpriteSheet.png" id="6_t038w"]
 [ext_resource type="PackedScene" uid="uid://cnfecxbmyk4jy" path="res://UtilityMenus/SaveMenu.tscn" id="8_1b5g0"]
 [ext_resource type="PackedScene" uid="uid://bnhfk1330px6k" path="res://Interactables/SceneBase/InteractableBase2D.tscn" id="9_xc585"]
-[ext_resource type="Script" uid="uid://cyur0xri1rlq0" path="res://Trackers/state_tracker.gd" id="10_dxeid"]
 [ext_resource type="Resource" uid="uid://5xr236ro0bma" path="res://CustomResourceInstances/InteractableData/intdatatest1.tres" id="10_gj5ny"]
-[ext_resource type="Script" uid="uid://d3cp84oqlijy3" path="res://Interactables/Triggers/state_change_trigger.gd" id="11_d1yq0"]
-[ext_resource type="Script" uid="uid://cx8qp15wsv0uu" path="res://Interactables/Triggers/StateTriggers/change_sprite_state_trigger.gd" id="13_y1s82"]
+[ext_resource type="Script" uid="uid://bc4rs4gvph6fh" path="res://Interactables/Triggers/interactive_dialogue_trigger.gd" id="11_gj5ny"]
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="12_y1s82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xpj1"]
 
@@ -73,6 +72,13 @@ texture_region_size = Vector2i(8, 8)
 tile_size = Vector2i(8, 8)
 sources/0 = SubResource("TileSetAtlasSource_lr1us")
 
+[sub_resource type="Resource" id="Resource_ljevo"]
+script = ExtResource("12_y1s82")
+id = "blah"
+input_lines_id_array = Array[String](["test1", "test1", "test1", "test1", "test1"])
+text_array = Array[String](["toast"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"
+
 [node name="TestScene" type="Node2D"]
 script = ExtResource("1_lr1us")
 
@@ -111,9 +117,6 @@ tile_set = SubResource("TileSet_1b5g0")
 [node name="PlayerCharacterBody" parent="." groups=["player"] instance=ExtResource("2_1iw0e")]
 position = Vector2(-2, -13)
 
-[node name="PlayerCharacterAnimatedSprite" parent="PlayerCharacterBody" index="0"]
-animation = &"MOVE_FORWARD"
-
 [node name="PlayerDebug" parent="PlayerCharacterBody" index="2"]
 debug_mode = false
 
@@ -137,18 +140,11 @@ offset_bottom = -78.0
 position = Vector2(-11, -42)
 my_data = ExtResource("10_gj5ny")
 
-[node name="StateTracker" type="Node" parent="InteractableBase2d"]
-script = ExtResource("10_dxeid")
-metadata/_custom_type_script = "uid://cyur0xri1rlq0"
-
-[node name="StateChangeTrigger" type="Node" parent="InteractableBase2d"]
-script = ExtResource("11_d1yq0")
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d"]
+script = ExtResource("11_gj5ny")
+output_line = SubResource("Resource_ljevo")
 automatic_enter_trigger = false
-metadata/_custom_type_script = "uid://d3cp84oqlijy3"
-
-[node name="StateChangeTextureTrigger" type="Node" parent="InteractableBase2d"]
-script = ExtResource("13_y1s82")
-metadata/_custom_type_script = "uid://cx8qp15wsv0uu"
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
 
 [connection signal="body_entered" from="DialogueSprite/Dialoguetest" to="DialogueSprite/Dialoguetest" method="_on_body_entered"]
 

@@ -2,7 +2,7 @@ extends Node
 
 @export var save_data: Dictionary 
 
-var active_save: String = "user://Sams Game/saves/hello.tres"
+var active_save: String
 
 func _import_change_to_save_data(data_type: String, id: String, property: String, value, resource_signal_name: String = ""):
 	if !save_data.has(data_type):
@@ -23,9 +23,11 @@ func export_resource_saved_data(data_type: String, id: String) -> Dictionary:
 	return result
 
 func set_active_save_data():
+	if active_save == null or active_save == "":
+		return
 	var active_save_file = load(active_save)
 	save_data = active_save_file.save_data
-	print("THIS IS THE SAVE DATA: ", save_data)
+
 
 func _generate_save_folder():
 	var err = DirAccess.make_dir_recursive_absolute("user://Sams Game/saves/")
@@ -67,4 +69,3 @@ func get_save_files() -> Array:
 
 func _ready() -> void:
 	_generate_save_folder()
-	set_active_save_data()

@@ -18,7 +18,7 @@ func _enter_trigger(triggering_body):
 	_trigger_change_scene()
 
 func _exit_trigger(triggering_body):
-	pass
+	is_inside_area = false
 
 func _input_trigger(triggering_body):
 	if automatic_enter_trigger:

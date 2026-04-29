@@ -36,7 +36,6 @@ func get_dialogue_y_offset(speaking_entity: Node):
 		pass
 
 func _show_text_box():
-	print(text_box.get_parent())
 	text_box.display_text(dialogue_lines[current_line_index])
 	can_advance_line = false
 

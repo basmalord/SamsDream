@@ -29,8 +29,8 @@ func _ready():
 func _enter_trigger(triggering_body):
 	pass
 
-func _exit_trigger(triggering_body):
+func _exit_trigger(_triggering_body):
 	pass
 
-func _input_trigger(triggering_body):
+func _input_trigger(_triggering_body):
 	pass

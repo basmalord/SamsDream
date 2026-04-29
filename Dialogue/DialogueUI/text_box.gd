@@ -2,7 +2,7 @@ extends MarginContainer
 
 class_name TextBox
 
-const MAX_WIDTH: int = 64
+const MAX_WIDTH: int = 275
 
 @onready var text_box_label = $MarginContainer/Label
 @onready var text_box_timer = $LetterDisplayTimer
@@ -13,15 +13,25 @@ const MAX_WIDTH: int = 64
 @export var text: String
 var letter_index: int = 0
 
-signal finished_displaying()
+signal finished_displaying
 
 func display_text(text_to_display: String):
 	text = text_to_display
 	text_box_label.text = text_to_display
 	custom_minimum_size.x = min(size.x, MAX_WIDTH)
-	if size.x > MAX_WIDTH:
+	print("this is cms: ",custom_minimum_size.x)
+	if size.x >= MAX_WIDTH:
+		text_box_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	else:
+		text_box_label.autowrap_mode = TextServer.AUTOWRAP_OFF
+	var interactive_ui_node = get_parent()
+	var max_characters = interactive_ui_node.CHARACTER_LIMIT
+	var index = interactive_ui_node.current_line_index
+	if index == 0 and text_to_display.length() == max_characters:
+		custom_minimum_size.x = MAX_WIDTH
 		text_box_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	text_box_label.text = ""
+	print("this is cms 2: ", custom_minimum_size.x, "this is autowrapmode: ", text_box_label.autowrap_mode)
 	_display_letter()
 
 func _display_letter():

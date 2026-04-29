@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4c6ns38sseib"]
+[gd_scene load_steps=5 format=3 uid="uid://b4c6ns38sseib"]
 
+[ext_resource type="FontFile" uid="uid://bmo4qel4k3up" path="res://fonts/ModernDOS9x16.ttf" id="1_trc6a"]
 [ext_resource type="Script" uid="uid://dfnhf8stbixo7" path="res://Dialogue/InteractiveDialogueUI/input_line.gd" id="1_uvy14"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trc6a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mprax"]
 
 [node name="InputLine" type="Button"]
 offset_right = 8.0
 offset_bottom = 8.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_trc6a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_trc6a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mprax")
+autowrap_mode = 3
+autowrap_trim_flags = 0
 script = ExtResource("1_uvy14")

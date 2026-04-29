@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://df44hbw5trstf"]
+[gd_scene load_steps=21 format=3 uid="uid://df44hbw5trstf"]
 
 [ext_resource type="Script" uid="uid://i6e1sj8fd1j4" path="res://PlayerCharacterBase/player_character_body.gd" id="1_b88be"]
 [ext_resource type="Texture2D" uid="uid://nbhvi8sj26h3" path="res://icon.svg" id="2_b7l6i"]
@@ -40,17 +40,9 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_qnqp5")
 region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g553x"]
-atlas = ExtResource("2_qnqp5")
-region = Rect2(16, 32, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ymet3"]
 atlas = ExtResource("2_qnqp5")
 region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hxfrl"]
-atlas = ExtResource("2_qnqp5")
-region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r2xoc"]
 atlas = ExtResource("3_rexmj")
@@ -97,29 +89,17 @@ animations = [{
 "texture": SubResource("AtlasTexture_yjl5y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g553x")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ymet3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g553x")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yjl5y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hxfrl")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_r2xoc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hxfrl")
 }],
 "loop": true,
 "name": &"MOVE_SIDEWAYS",
-"speed": 6.0
+"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufdxq"]
@@ -175,3 +155,7 @@ collision_mask = 4
 shape = SubResource("SeparationRayShape2D_qnqp5")
 
 [node name="InteractiveDialogueUi" parent="." instance=ExtResource("7_rexmj")]
+offset_left = -160.0
+offset_top = 89.0
+offset_right = -160.0
+offset_bottom = 89.0

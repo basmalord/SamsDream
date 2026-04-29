@@ -16,6 +16,12 @@ func _setup_data(calling_node: Node):
 	if input_line_data.said_before == true:
 		modulate.a = 0.5
 	text = input_line_data.text
+	var index: int = 0
+	for child in get_parent().get_children():
+		index += 1
+		if child == self:
+			continue
+	text = str(index) + ". " + text
 	my_control = calling_node
 	pressed.connect(_call_control)
 
@@ -30,4 +36,5 @@ func _call_control():
 		my_control._end_dialogue()
 	var output_line_resource_path = DataDirectoriesRegistry.get_file_path("OutputLine", input_line_data.output_line_id)
 	var output_line_resource: OutputLine = load(output_line_resource_path)
+	print("This is output_line res: ", output_line_resource.id)
 	my_control.setup_from_output_line_resource(output_line_resource)
