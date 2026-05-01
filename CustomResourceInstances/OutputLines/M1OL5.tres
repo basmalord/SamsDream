@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_pu7om"]
+
+[resource]
+script = ExtResource("1_pu7om")
+id = "M1OL5"
+text_array = Array[String](["Can’t talk anymore Sam, there’s recruits to find!"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

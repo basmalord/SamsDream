@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://618elsywuahg"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_qh8r5"]
+
+[resource]
+script = ExtResource("1_qh8r5")
+id = "B2OL1"
+text_array = Array[String](["Wake up Sam! I’m heading to work early but I expect you to be on time today. You know you use the W, A, S, and D keys to move, soI don’t want to hear any excuses about ‘forgetting how to move’, again. Oh, and I’ve left some pocket money in front of the front door for you, you can pick it up using the E key, the same key you use to skip passed all the dialogue you can’t be bothered readi-"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

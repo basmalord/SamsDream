@@ -20,10 +20,11 @@ func _change_input_state():
 	if input_state == "world":
 		input_state = "ui"
 		emit_signal("ui_state_entered")
-		current_pressed_inputs.erase("ADVANCE_DIALOGUE")
+		current_pressed_inputs = []
 	elif input_state == "ui":
 		input_state = "world"
 		emit_signal("world_state_entered")
+		current_pressed_inputs = []
 
 
 func _input(event: InputEvent) -> void:

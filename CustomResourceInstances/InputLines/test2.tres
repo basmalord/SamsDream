@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://p0sww1aijyu3"]
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://dx4en6c4ike67"]
 
 [ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_37g6a"]
 
@@ -7,5 +7,4 @@ script = ExtResource("1_37g6a")
 id = "test2"
 output_line_id = "test1"
 text = "this is input test 2"
-end_dialogue = true
 metadata/_custom_type_script = "uid://dg2snys4lnlkt"

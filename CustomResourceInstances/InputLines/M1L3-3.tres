@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://fipwim3bww8"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_mbibe"]
+
+[resource]
+script = ExtResource("1_mbibe")
+id = "M1L3-3"
+output_line_id = "M1OL4"
+text = "Micah, I really don’t have time…"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

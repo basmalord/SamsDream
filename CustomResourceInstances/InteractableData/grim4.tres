@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InteractableData" load_steps=2 format=3 uid="uid://5dvkb7y8wwnq"]
+
+[ext_resource type="Script" uid="uid://cf7am3xtia04j" path="res://CustomResourceInstances/InteractableData/interactable_data.gd" id="1_utayo"]
+
+[resource]
+script = ExtResource("1_utayo")
+id = "grim4"
+state_textures = null
+initial_state = true
+metadata/_custom_type_script = "uid://cf7am3xtia04j"

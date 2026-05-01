@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://fi6r52pfi424"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_gpbpw"]
+
+[resource]
+script = ExtResource("1_gpbpw")
+id = "G2L1-1"
+output_line_id = "GOL2"
+text = "(Show Grim your coins)."
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

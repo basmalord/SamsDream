@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://diowvhx67a7p1"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_m5qc0"]
+
+[resource]
+script = ExtResource("1_m5qc0")
+id = "G1L1-1"
+output_line_id = "G1OL2"
+text = "Hi Slim!"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://di4ppg2ljefl2"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_iwx8c"]
+
+[resource]
+script = ExtResource("1_iwx8c")
+id = "G1OL4"
+input_lines_id_array = Array[String](["G1L4-1"])
+text_array = Array[String](["And you can find the MAIN MENU by pressing ESCAPE and selecting ‘RETURN TO MAIN MENU’ using the LEFT MOUSE BUTTON."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

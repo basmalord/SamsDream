@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://b7ktbe5lf3fc6"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_w6m4u"]
+
+[resource]
+script = ExtResource("1_w6m4u")
+id = "J1OL2"
+input_lines_id_array = Array[String](["J1L2-1"])
+text_array = Array[String](["What can I do for you?"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

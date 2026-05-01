@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://bttu01w32w14r"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_xtlhx"]
+
+[resource]
+script = ExtResource("1_xtlhx")
+id = "J1OL3"
+input_lines_id_array = Array[String](["J1L2-1"])
+text_array = Array[String](["Good! If you’re at the top, you can’t make great art. Great art always comes from a place of sadness, a place of tragedy. And then it finds its way into my gallery- if you’re lucky and sad that is! Anyway, what can I do for you?"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

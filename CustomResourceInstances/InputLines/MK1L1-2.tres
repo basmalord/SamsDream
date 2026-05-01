@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://bv6ichtnmq3x8"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_8n00g"]
+
+[resource]
+script = ExtResource("1_8n00g")
+id = "MK1L1-2"
+output_line_id = "MK1OL4"
+text = "I don’t feel like a trooper…"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

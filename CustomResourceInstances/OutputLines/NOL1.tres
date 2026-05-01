@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://vbh2j7uof0l8"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_81v7v"]
+
+[resource]
+script = ExtResource("1_81v7v")
+id = "NOL1"
+text_array = Array[String](["Brian, Graham’s gone missing so neither of us will be in today. If you’d like to help, you can find me at Pennance Park handing out fliers, Lucy."])
+changers_dict = Dictionary[String, Dictionary]({
+"grim2": {
+"is_dead": false
+}
+})
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

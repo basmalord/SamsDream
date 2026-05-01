@@ -20,6 +20,7 @@ func _ready():
 	player.input_manager.connect("ui_state_entered",Callable(self, "_set_should_move"))
 
 func _set_should_move():
+	print("this is should move: ", should_move)
 	if should_move == true:
 		should_move = false
 	elif should_move == false:

@@ -10,6 +10,9 @@ var state_tracker: StateTracker
 
 
 func _ready() -> void:
+	if my_data == null:
+		return
+	$Label.text = my_data.id
 	var changes_dict = SaveManager.export_resource_saved_data(my_data.data_type, my_data.id)
 	if changes_dict != {}:
 		var keys = changes_dict.keys()

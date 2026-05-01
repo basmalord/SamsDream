@@ -1,14 +1,10 @@
-[gd_resource type="Resource" script_class="InteractableData" load_steps=4 format=3 uid="uid://5xr236ro0bma"]
+[gd_resource type="Resource" script_class="InteractableData" load_steps=2 format=3 uid="uid://5xr236ro0bma"]
 
 [ext_resource type="Script" uid="uid://cf7am3xtia04j" path="res://CustomResourceInstances/InteractableData/interactable_data.gd" id="1_dqil8"]
-[ext_resource type="Texture2D" uid="uid://c3qllcuidlm1q" path="res://testsquare.png" id="2_lkdiq"]
-[ext_resource type="Texture2D" uid="uid://nbhvi8sj26h3" path="res://icon.svg" id="3_i0xco"]
 
 [resource]
 script = ExtResource("1_dqil8")
 id = "intdata1"
-state_textures = Dictionary[String, Texture2D]({
-"altered": ExtResource("3_i0xco"),
-"default": ExtResource("2_lkdiq")
-})
+state_textures = null
+initial_state = true
 metadata/_custom_type_script = "uid://cf7am3xtia04j"

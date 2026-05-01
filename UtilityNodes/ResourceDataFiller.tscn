@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://bajff7j3ukohg"]
+
+[ext_resource type="Script" uid="uid://vym05iwfqepu" path="res://UtilityNodes/resource_data_filler.gd" id="1_6nc4u"]
+
+[node name="ResourceDataFiller" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6nc4u")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_right = 179.0
+offset_bottom = 20.0
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 345.0
+offset_right = 196.0
+offset_bottom = 365.0
+item_count = 2
+popup/item_0/text = "OutputLines"
+popup/item_0/id = 0
+popup/item_1/text = "InputLines"
+popup/item_1/id = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 342.0
+offset_right = 318.0
+offset_bottom = 373.0
+text = "save"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 112.0
+offset_right = 373.0
+offset_bottom = 317.0
+
+[connection signal="item_selected" from="OptionButton2" to="." method="_populate_options"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

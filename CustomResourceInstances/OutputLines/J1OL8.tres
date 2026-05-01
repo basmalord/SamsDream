@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_6aa4n"]
+
+[resource]
+script = ExtResource("1_6aa4n")
+id = "J1OL8"
+text_array = Array[String](["Sorry, no time to talk to the likes of you…"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

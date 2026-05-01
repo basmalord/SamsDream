@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bnqr4p33e7lc3"]
+[gd_scene load_steps=36 format=4 uid="uid://bnqr4p33e7lc3"]
 
 [ext_resource type="Texture2D" uid="uid://nbhvi8sj26h3" path="res://icon.svg" id="1_2xpj1"]
 [ext_resource type="Texture2D" uid="uid://c3qllcuidlm1q" path="res://testsquare.png" id="1_58bnb"]
@@ -8,10 +8,30 @@
 [ext_resource type="Script" uid="uid://cm1veavyj5pk3" path="res://TestScenes/test_script/test1.gd" id="3_db485"]
 [ext_resource type="Texture2D" uid="uid://m6pysg2m0ann" path="res://Resources/SpriteSheets/ObstacleSpriteSheet.png" id="6_t038w"]
 [ext_resource type="PackedScene" uid="uid://cnfecxbmyk4jy" path="res://UtilityMenus/SaveMenu.tscn" id="8_1b5g0"]
+[ext_resource type="Script" uid="uid://bf6mdi1ug545h" path="res://UtilityNodes/spawner_2d.gd" id="9_gj5ny"]
 [ext_resource type="PackedScene" uid="uid://bnhfk1330px6k" path="res://Interactables/SceneBase/InteractableBase2D.tscn" id="9_xc585"]
-[ext_resource type="Resource" uid="uid://5xr236ro0bma" path="res://CustomResourceInstances/InteractableData/intdatatest1.tres" id="10_gj5ny"]
-[ext_resource type="Script" uid="uid://bc4rs4gvph6fh" path="res://Interactables/Triggers/interactive_dialogue_trigger.gd" id="11_gj5ny"]
-[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="12_y1s82"]
+[ext_resource type="Resource" uid="uid://3lg5ax53w0mf" path="res://CustomResourceInstances/InteractableData/brian1.tres" id="11_y40o2"]
+[ext_resource type="Script" uid="uid://bc4rs4gvph6fh" path="res://Interactables/Triggers/interactive_dialogue_trigger.gd" id="12_ptb2g"]
+[ext_resource type="Resource" uid="uid://f70u6uuah6b1" path="res://CustomResourceInstances/InteractableData/computer.tres" id="12_wxxw3"]
+[ext_resource type="Resource" uid="uid://dc01o802ke0y" path="res://CustomResourceInstances/InteractableData/grim1.tres" id="13_ptb2g"]
+[ext_resource type="Resource" uid="uid://pg8tu02knhew" path="res://CustomResourceInstances/OutputLines/B1OL1.tres" id="13_yhmgl"]
+[ext_resource type="Resource" uid="uid://bx1n4qskhxb50" path="res://CustomResourceInstances/InteractableData/grim2.tres" id="14_yhmgl"]
+[ext_resource type="Resource" uid="uid://dm6voguou4chr" path="res://CustomResourceInstances/InteractableData/grim3.tres" id="15_e7i17"]
+[ext_resource type="Resource" uid="uid://1ebla3a60j0n" path="res://CustomResourceInstances/OutputLines/COL1.tres" id="15_yhmgl"]
+[ext_resource type="Resource" uid="uid://bxot6j78wv3hu" path="res://CustomResourceInstances/InteractableData/jen.tres" id="16_0qpek"]
+[ext_resource type="Resource" uid="uid://w0lr1s61pmrr" path="res://CustomResourceInstances/OutputLines/G1OL1.tres" id="17_e7i17"]
+[ext_resource type="Resource" uid="uid://dhiqonbud20de" path="res://CustomResourceInstances/InteractableData/lucy.tres" id="17_iyijb"]
+[ext_resource type="Resource" uid="uid://c5xjm0f2y45ox" path="res://CustomResourceInstances/InteractableData/margo.tres" id="18_5hs07"]
+[ext_resource type="Resource" uid="uid://bjkhelbl226ab" path="res://CustomResourceInstances/OutputLines/G2OL1.tres" id="19_0qpek"]
+[ext_resource type="Resource" uid="uid://qe83q6yatwr6" path="res://CustomResourceInstances/InteractableData/micah.tres" id="19_4sqei"]
+[ext_resource type="Resource" uid="uid://d3p8fbatub7gb" path="res://CustomResourceInstances/InteractableData/note.tres" id="20_ybsni"]
+[ext_resource type="Resource" uid="uid://w8wptgpwk2y6" path="res://CustomResourceInstances/OutputLines/G3OL1.tres" id="21_iyijb"]
+[ext_resource type="Resource" uid="uid://d2y8t8qyidl2c" path="res://CustomResourceInstances/OutputLines/J1OL1.tres" id="23_5hs07"]
+[ext_resource type="Resource" uid="uid://dyw6i3l6e8kw4" path="res://CustomResourceInstances/OutputLines/L1OL1.tres" id="25_4sqei"]
+[ext_resource type="Resource" uid="uid://00cuq0xwfqv3" path="res://CustomResourceInstances/OutputLines/MK1OL1.tres" id="27_ybsni"]
+[ext_resource type="Resource" uid="uid://uga7igmky3n5" path="res://CustomResourceInstances/OutputLines/M1OL1.tres" id="29_co2vi"]
+[ext_resource type="Resource" uid="uid://vbh2j7uof0l8" path="res://CustomResourceInstances/OutputLines/NOL1.tres" id="31_ryysm"]
+[ext_resource type="Resource" uid="uid://5dvkb7y8wwnq" path="res://CustomResourceInstances/InteractableData/grim4.tres" id="32_yo4jt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xpj1"]
 
@@ -72,13 +92,6 @@ texture_region_size = Vector2i(8, 8)
 tile_size = Vector2i(8, 8)
 sources/0 = SubResource("TileSetAtlasSource_lr1us")
 
-[sub_resource type="Resource" id="Resource_ljevo"]
-script = ExtResource("12_y1s82")
-id = "blah"
-input_lines_id_array = Array[String](["test1", "test1", "test1", "test1", "test1"])
-text_array = Array[String](["toast"])
-metadata/_custom_type_script = "uid://fktb7g3qo4jr"
-
 [node name="TestScene" type="Node2D"]
 script = ExtResource("1_lr1us")
 
@@ -137,16 +150,113 @@ offset_right = -64.0
 offset_bottom = -78.0
 
 [node name="InteractableBase2d" parent="." instance=ExtResource("9_xc585")]
-position = Vector2(-11, -42)
-my_data = ExtResource("10_gj5ny")
+position = Vector2(-135, -22)
+my_data = ExtResource("11_y40o2")
 
 [node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d"]
-script = ExtResource("11_gj5ny")
-output_line = SubResource("Resource_ljevo")
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("13_yhmgl")
 automatic_enter_trigger = false
 metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d2" parent="." instance=ExtResource("9_xc585")]
+position = Vector2(-76, -26)
+my_data = ExtResource("12_wxxw3")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d2"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("15_yhmgl")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d6" parent="InteractableBase2d2" instance=ExtResource("9_xc585")]
+position = Vector2(148, 30)
+my_data = ExtResource("16_0qpek")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d2/InteractableBase2d6"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("23_5hs07")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d7" parent="." instance=ExtResource("9_xc585")]
+position = Vector2(-26, -63)
+my_data = ExtResource("17_iyijb")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d7"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("25_4sqei")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d8" parent="." instance=ExtResource("9_xc585")]
+position = Vector2(42, -57)
+my_data = ExtResource("18_5hs07")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d8"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("27_ybsni")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d9" parent="." instance=ExtResource("9_xc585")]
+position = Vector2(63, 69)
+my_data = ExtResource("19_4sqei")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d9"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("29_co2vi")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d10" parent="." instance=ExtResource("9_xc585")]
+position = Vector2(81, -35)
+my_data = ExtResource("20_ybsni")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="InteractableBase2d10"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("31_ryysm")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="Spawner2D" type="Node2D" parent="." groups=["spawner"]]
+script = ExtResource("9_gj5ny")
+metadata/_custom_type_script = "uid://bf6mdi1ug545h"
+
+[node name="InteractableBase2d3" parent="Spawner2D" instance=ExtResource("9_xc585")]
+position = Vector2(-142, 70)
+my_data = ExtResource("13_ptb2g")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="Spawner2D/InteractableBase2d3"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("17_e7i17")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d4" parent="Spawner2D" instance=ExtResource("9_xc585")]
+position = Vector2(-64, 101)
+my_data = ExtResource("14_yhmgl")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="Spawner2D/InteractableBase2d4"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("19_0qpek")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d5" parent="Spawner2D" instance=ExtResource("9_xc585")]
+position = Vector2(22, 69)
+my_data = ExtResource("15_e7i17")
+
+[node name="InteractiveDialogueTrigger" type="Node" parent="Spawner2D/InteractableBase2d5"]
+script = ExtResource("12_ptb2g")
+output_line = ExtResource("21_iyijb")
+automatic_enter_trigger = false
+metadata/_custom_type_script = "uid://bc4rs4gvph6fh"
+
+[node name="InteractableBase2d11" parent="Spawner2D" instance=ExtResource("9_xc585")]
+my_data = ExtResource("32_yo4jt")
 
 [connection signal="body_entered" from="DialogueSprite/Dialoguetest" to="DialogueSprite/Dialoguetest" method="_on_body_entered"]
 
 [editable path="PlayerCharacterBody"]
-[editable path="InteractableBase2d"]
+[editable path="Spawner2D/InteractableBase2d5"]

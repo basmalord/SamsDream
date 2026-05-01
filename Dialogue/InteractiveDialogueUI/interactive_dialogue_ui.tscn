@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfl2es617uxbv"]
+[gd_scene load_steps=7 format=3 uid="uid://dfl2es617uxbv"]
 
 [ext_resource type="Script" uid="uid://df23i4ia7hfbp" path="res://Dialogue/InteractiveDialogueUI/interactive_dialogue_ui.gd" id="1_ks45v"]
-[ext_resource type="Resource" uid="uid://cfxp8xiwcvmlu" path="res://CustomResourceInstances/OutputLines/test1.tres" id="2_djdqd"]
+[ext_resource type="Resource" uid="uid://cdxumdc1apl4i" path="res://CustomResourceInstances/OutputLines/test1.tres" id="2_djdqd"]
 [ext_resource type="PackedScene" uid="uid://mucuopy0bom2" path="res://Dialogue/DialogueUI/text_box.tscn" id="3_f016e"]
 [ext_resource type="Texture2D" uid="uid://b1hkaoktxd6cf" path="res://Textures/UI/outputbox_background.png" id="3_ylqrj"]
 [ext_resource type="Script" uid="uid://w7wfvl160us6" path="res://Dialogue/InteractiveDialogueUI/scroll_container.gd" id="4_hffth"]
+[ext_resource type="FontFile" uid="uid://ek8frirnlueu" path="res://fonts/ModernDOS8x16.ttf" id="6_v2x18"]
 
 [node name="InteractiveDialogueUi" type="Control"]
 layout_mode = 3
@@ -65,3 +66,15 @@ offset_left = 24.0
 offset_top = 11.0
 offset_right = 299.0
 offset_bottom = 43.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 52.0
+offset_top = 78.0
+offset_right = 268.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_v2x18")
+theme_override_font_sizes/font_size = 16
+text = "Press E to end dialogue."

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://clo0vfc272wg1"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_f6dq0"]
+
+[resource]
+script = ExtResource("1_f6dq0")
+id = "L1OL5"
+text_array = Array[String](["Thanks Sam, I’ll be waiting here for when you’re done.", "Thanks Sam, I’ll be waiting here  when you’re done."])
+changers_dict = Dictionary[String, Dictionary]({
+"J1OL9": {
+"transform": "J1OL1"
+},
+"L1OL1": {
+"transform": "L1OL7"
+}
+})
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

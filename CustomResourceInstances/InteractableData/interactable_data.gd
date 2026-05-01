@@ -32,3 +32,4 @@ var triggered: bool = false
 			states = new_value
 			emit_signal("data_changed", data_type,  id, "id", id)
 			emit_changed()
+@export var initial_state: bool

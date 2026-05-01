@@ -13,3 +13,8 @@ script = ExtResource("1_xnvsj")
 shape = SubResource("RectangleShape2D_a8n5g")
 
 [node name="InteractableSprite" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -23.0
+offset_right = 22.0

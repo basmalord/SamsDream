@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://2p04jdio6ocq"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_0mewr"]
+
+[resource]
+script = ExtResource("1_0mewr")
+id = "J1L1-2"
+output_line_id = "J1OL3"
+text = "I’ve been better…"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://cntfhklb4kkls"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_cmaa0"]
+
+[resource]
+script = ExtResource("1_cmaa0")
+id = "MK1OL2"
+input_lines_id_array = Array[String](["MK1L2-1"])
+text_array = Array[String](["Sam… Jen called ahead. She said not to talk to you. Said you were pretty rude to her. I’ll take the flier you brought, but I won’t disobey Jen."])
+changers_dict = Dictionary[String, Dictionary]({
+"MK1OL2": {
+"transform": "MK1OL02"
+},
+"grim3": {
+"is_dead": false
+},
+"grim4": {
+"is_dead": true
+}
+})
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

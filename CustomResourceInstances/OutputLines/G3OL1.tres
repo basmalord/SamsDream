@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://w8wptgpwk2y6"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_htf24"]
+
+[resource]
+script = ExtResource("1_htf24")
+id = "G3OL1"
+input_lines_id_array = Array[String](["G3L1-1"])
+text_array = Array[String](["Not so fast, Sam. Lucy needs you to drop a flier off at Jen’s gallery before getting past yours truly. Can’t disrupt the order of things now can we? Well, maybe we can. Maybe you can. But for the price of 100 BLOODIED COINS."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

@@ -12,13 +12,25 @@ const MANAGERS := ["behaviour", "logic", "ui", "input", "inventory"]
 @onready var dialogue_text_box = $PlayerUI/DialogueUI/TextBox
 @onready var animated_sprite = $PlayerCharacterAnimatedSprite
 @onready var interactive_dialogue = $InteractiveDialogueUi
+@onready var resource_control = $ResourceIndicatorControl
 
 func _ready():
-	await get_tree().create_timer(1)
 	if !SaveManager.save_data.has("player_data"):
 		return
 	global_position = SaveManager.save_data["player_data"]["player"]["globalpos"]
+	CoinRegistry.connect("coins_changed", Callable(self, "_update_coin_registry"))
+	var coins: int = SaveManager.save_data["player_data"]["player"]["coins"]
+	CoinRegistry._set_coins(coins)
+	FliersRegistry.connect("fliers_changed", Callable(self, "_update_flier_registry"))
+	var fliers: int = SaveManager.save_data["player_data"]["player"]["fliers"]
+	FliersRegistry._set_fliers(fliers)
 
+
+func _update_coin_registry():
+	resource_control.coin_label.text = str(CoinRegistry.coins)
+
+func _update_flier_registry():
+	resource_control.fliers_label.text = str(FliersRegistry.fliers)
 
 #PROCESS_FUNCTION
 

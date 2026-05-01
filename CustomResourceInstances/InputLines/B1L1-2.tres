@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://bql2xjqcbmrks"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_a6thw"]
+
+[resource]
+script = ExtResource("1_a6thw")
+id = "B1L1-2"
+output_line_id = "B1OL2"
+text = "Sorry I’m late, Dad."
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

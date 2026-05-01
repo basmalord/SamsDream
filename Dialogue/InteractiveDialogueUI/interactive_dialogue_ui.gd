@@ -2,16 +2,17 @@ extends Control
 @onready var output_box: TextBox = $TextBox
 @onready var input_line_controller: Control = $InputLineController
 @onready var my_sprite: Sprite2D = $InteractiveDialogueSprite
+@onready var end_dialogue_text_box: Label = $Label
 @export var endemic_output_line: OutputLine 
 
-var input_line_font: Font = preload("res://fonts/ModernDOS9x16.ttf")
+var input_line_font: Font = preload("res://fonts/ModernDOS8x16.ttf")
 var dialogue_lines: Array
 var is_dialogue_active: bool = false
 var can_advance_line: bool = false
 var current_line_index: int = 0
 var input_options_array: Array[String]
 
-const CHARACTER_LIMIT: int = 58
+const CHARACTER_LIMIT: int = 30
 const ACCEPTABLE_ENDS: Array[String] = [" ", ".", ",", "!", "?"]
 
 
@@ -35,9 +36,30 @@ func _end_dialogue():
 	hide()
 
 func _destroy_input_buttons():
-	var vbox = input_line_controller.get_children()[0]
+	var vbox = input_line_controller.get_children()[0].get_children()[0]
 	for child in vbox.get_children():
 		child.queue_free()
+
+func _handle_changes(target_output_line: OutputLine):
+	var changers_dict = target_output_line.changers_dict
+	var ids: Array[String]
+	for key in changers_dict.keys():
+		ids.append(key)
+	for id in ids:
+		var changes_to_make: Dictionary = changers_dict[id]
+		for key in changes_to_make.keys():
+			var value = changes_to_make[key]
+			match key:
+				"transform":
+					SaveManager._import_change_to_save_data("OutputLine", id, key, value)
+				"is_dead":
+					print("This is id: ", id, "this is vlaue: ", value)
+					var spawner: Spawner2D
+					spawner = get_tree().get_first_node_in_group("spawner")
+					if !value:
+						spawner._spawn_character(id)
+					elif value:
+						spawner._despawn_character(id)
 
 func setup_from_output_line_resource(new_output_line: OutputLine):
 	for child in input_line_controller.get_children()[0].vbox_container.get_children():
@@ -45,11 +67,19 @@ func setup_from_output_line_resource(new_output_line: OutputLine):
 	var output_id: String = new_output_line.id
 	var resource_type = "OutputLine"
 	var changes_dict = SaveManager.export_resource_saved_data(resource_type, output_id)
+	var keys = changes_dict.keys()
+	if keys.has("transform"): #this is a really dangerous and stupid way to do things, don't repeat for projects you actually care about.
+		print("HANDLING CHANGES6")
+		var transform_filepath: String = changes_dict["transform"]
+		var new_data = ResourceLoader.load(transform_filepath)
+		if new_data is OutputLine:
+			setup_from_output_line_resource(new_data)
+			return
 	if changes_dict != {}:
-		var keys = changes_dict.keys()
 		for key in keys:
 			var new_value = changes_dict[key]
 			new_output_line.set(key, new_value)
+	_handle_changes(new_output_line)
 	current_line_index = 0
 	dialogue_lines = generate_text_array(new_output_line.text_array[0])
 	_present_output_text()
@@ -77,6 +107,10 @@ func _present_input_options(input_options: Array[String]):
 		new_input_button.autowrap_mode = TextServer.AUTOWRAP_WORD
 		print("2: ", new_input_button.size)
 		new_input_button._setup_data(self)
+	if input_options.size() == 0:
+		end_dialogue_text_box.show()
+	else:
+		end_dialogue_text_box.hide()
 
 func _present_output_text():
 	print("this is dialogue lines: ", dialogue_lines)
@@ -131,5 +165,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if(event.is_action_pressed("ADVANCE_DIALOGUE") && is_dialogue_active && can_advance_line):
 		current_line_index += 1
 		if current_line_index >= dialogue_lines.size():
+			if input_options_array.size() == 0:
+				_end_dialogue()
 			return
 		_present_output_text()

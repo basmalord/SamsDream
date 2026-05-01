@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://dtdrskfneahab"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_pn3w3"]
+
+[resource]
+script = ExtResource("1_pn3w3")
+id = "L1OL3"
+input_lines_id_array = Array[String](["L1L2-1", "L1L2-2"])
+text_array = Array[String](["Jumping into action! That’s what we need, Sam. I’m handing out fliers but I can’t be everywhere at once, I need your help in posting them about town."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

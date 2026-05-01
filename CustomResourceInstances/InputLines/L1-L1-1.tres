@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://c5hn7vam5458u"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_lkycc"]
+
+[resource]
+script = ExtResource("1_lkycc")
+id = "L1-L1-1"
+output_line_id = "L1OL2"
+text = "He's back at the Wharf. Want me to go get him?"
+changers_dict = Dictionary[String, Dictionary]({
+"L1OL5": {
+"transform": "L1OL6"
+}
+})
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

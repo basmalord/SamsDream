@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://ba5wmdp6bcyhc"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_bu3h3"]
+
+[resource]
+script = ExtResource("1_bu3h3")
+id = "B1L2-2"
+text = "You got it dad!"
+end_dialogue = true
+changers_dict = Dictionary[String, Dictionary]({
+"B1OL1": {
+"transform": "B1OL4"
+}
+})
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

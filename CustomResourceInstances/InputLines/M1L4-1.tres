@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://r4qjtmluvqbw"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_61di0"]
+
+[resource]
+script = ExtResource("1_61di0")
+id = "M1L4-1"
+text = "Bye Micah!"
+end_dialogue = true
+changers_dict = Dictionary[String, Dictionary]({
+"M1OL1": {
+"transform": "M1OL5"
+}
+})
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

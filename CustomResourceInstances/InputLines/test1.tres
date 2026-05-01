@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://n2peegwb5iah"]
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://0wyftbte2tsv"]
 
 [ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_tq05j"]
 
@@ -6,5 +6,13 @@
 script = ExtResource("1_tq05j")
 id = "test1"
 output_line_id = "test2"
-text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+text = "this is inputtest 1"
+changers_dict = Dictionary[String, Dictionary]({
+"intdata1": {
+"is_dead": true
+},
+"test2": {
+"transform": "res://CustomResourceInstances/OutputLines/NOL1.tres"
+}
+})
 metadata/_custom_type_script = "uid://dg2snys4lnlkt"

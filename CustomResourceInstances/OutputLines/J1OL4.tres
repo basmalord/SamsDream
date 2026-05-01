@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://dfwg1s7d015kw"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_e1mb6"]
+
+[resource]
+script = ExtResource("1_e1mb6")
+id = "J1OL4"
+input_lines_id_array = Array[String](["J1L3-1", "J1L3-2"])
+text_array = Array[String](["Oh dear, I do hope Lucy’s alright. She always struck me as such an emotional type, it can’t be easy for her I’m sure. But, like I always say, and I do always say this, with great trauma comes great art!"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

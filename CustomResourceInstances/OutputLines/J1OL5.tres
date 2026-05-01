@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://ku07t230k4hd"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_3ge2t"]
+
+[resource]
+script = ExtResource("1_3ge2t")
+id = "J1OL5"
+text_array = Array[String](["Of course, my dear. Anything for a polite young lady like yourself."])
+changers_dict = Dictionary[String, Dictionary]({
+"J1OL1": {
+"transform": "J1OL7"
+},
+"add_res": {
+"flier": 1
+},
+"grim3": {
+"is_dead": true
+}
+})
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

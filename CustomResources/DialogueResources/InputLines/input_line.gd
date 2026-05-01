@@ -36,3 +36,9 @@ var said_before: bool = false:
 			said_before = new_value
 			emit_signal("data_changed", data_type,  id, "said_before", said_before)
 			emit_changed()
+@export var changers_dict: Dictionary[String, Dictionary]:
+	set(new_value):
+		if changers_dict != new_value:
+			changers_dict = new_value
+			emit_signal("data_changed", data_type,  id, "changers_dcit", changers_dict)
+			emit_changed()

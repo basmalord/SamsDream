@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://djth3onns27pl"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_lpjbe"]
+
+[resource]
+script = ExtResource("1_lpjbe")
+id = "J1L3-1"
+output_line_id = "J1OL5"
+text = "That’s great, Jen. But could you post one of these fliers in the gallery please?"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

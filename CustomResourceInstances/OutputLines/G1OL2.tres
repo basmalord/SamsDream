@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://biy2o6tkk16c2"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_b01jg"]
+
+[resource]
+script = ExtResource("1_b01jg")
+id = "G1OL2"
+input_lines_id_array = Array[String](["G1L2-1"])
+text_array = Array[String](["Guess you’re going to work, ey? Well remember, you can always get there faster by running! All you need to do is press SHIFT while moving in a direction by using W, A, S, or D."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

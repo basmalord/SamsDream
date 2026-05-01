@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://1ebla3a60j0n"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_jcocq"]
+
+[resource]
+script = ExtResource("1_jcocq")
+id = "COL1"
+text_array = Array[String](["It’s Dad’s computer, locked. He’s been working on his online poetry book for ages now. Maybe it’ll help him get over Mum. At least that’ll make one of us…"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

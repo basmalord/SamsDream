@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://bmgop7gvuqhrv"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_t81d3"]
+
+[resource]
+script = ExtResource("1_t81d3")
+id = "COL2"
+text_array = Array[String](["Weird, dad’s left his computer unlocked. He’s left it on one of the poems from his website, ‘Left Astray’. Given the title, I’m not sure I can bring myself to read it, it could be about Mum…"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://1r6ptm3g604"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_jwte5"]
+
+[resource]
+script = ExtResource("1_jwte5")
+id = "B1L1-1"
+output_line_id = "B1OL2"
+text = "Well, you did say take your time."
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

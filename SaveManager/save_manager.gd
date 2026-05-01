@@ -34,6 +34,19 @@ func _generate_save_folder():
 	if err != OK:
 		push_error("Failed to create save directory: %s" % err)
 
+func _import_spawner_data():
+	var spawner_node: Spawner2D
+	spawner_node = get_tree().get_first_node_in_group("spawner")
+	if spawner_node == null:
+		return
+	var scenes_dict: Dictionary = spawner_node.character_scene_dict
+	var positions_dict: Dictionary = spawner_node.character_global_position_dict
+	var dead_dict: Dictionary = spawner_node.character_dead_dict
+	save_data["spawner"] = {}
+	save_data["spawner"]["scene_dict"] = scenes_dict
+	save_data["spawner"]["position_dict"] = positions_dict
+	save_data["spawner"]["character_dead_dict"] = dead_dict
+
 func save_game(save_name: String = "") -> int:
 	if save_name == "":
 		push_error("Save Requires Name")
@@ -41,10 +54,22 @@ func save_game(save_name: String = "") -> int:
 	var save_game_path: String = GlobalDataDirectory.SAVE_GAMES_FOLDER_PATH + "/" + save_name + ".tres"
 	var new_resource = SaveGame.new()
 	_import_player_save_data()
+	_import_coin_data()
+	_import_flier_data()
 	_import_scene_save_data()
+	_import_spawner_data()
 	new_resource.save_data = save_data
+	print("this is all save data: ", new_resource.save_data)
 	ResourceSaver.save(new_resource, save_game_path)
 	return 1
+
+func _import_coin_data():
+	var coins = CoinRegistry.get_coins()
+	_import_change_to_save_data("player_data", "player", "coins", coins)
+
+func _import_flier_data():
+	var fliers = FliersRegistry.get_fliers()
+	_import_change_to_save_data("player_data", "player", "fliers", fliers)
 
 func _import_player_save_data():
 	if get_tree().get_first_node_in_group("player") != null:

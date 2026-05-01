@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://bjkhelbl226ab"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_qp8ro"]
+
+[resource]
+script = ExtResource("1_qp8ro")
+id = "G2OL1"
+input_lines_id_array = Array[String](["G2L1-1"])
+text_array = Array[String](["Wanting back to your dad, ey Sam? Well, that’ll be 100 BLOODIED COINS please."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

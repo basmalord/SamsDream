@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_x0ihs"]
+
+[resource]
+script = ExtResource("1_x0ihs")
+id = "L1OL7"
+text_array = Array[String](["You couldn’t have handed them all out that quick! Come on, Sam I’m really worried about Graham!"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

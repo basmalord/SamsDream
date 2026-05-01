@@ -22,6 +22,8 @@ ConditionsGlobalRegistry="*res://Registries/conditions_global_registry.gd"
 InputsGlobalRegistry="*res://Registries/inputs_global_registry.gd"
 DataDirectoriesRegistry="*res://Registries/data_directories_registry.gd"
 SaveManager="*res://SaveManager/save_manager.gd"
+CoinRegistry="*res://Registries/coin_registry.gd"
+FliersRegistry="*res://Registries/fliers_registry.gd"
 
 [display]
 

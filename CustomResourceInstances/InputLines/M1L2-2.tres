@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://d28podahr0qrf"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_nr7lk"]
+
+[resource]
+script = ExtResource("1_nr7lk")
+id = "M1L2-2"
+output_line_id = "M1OL3"
+text = "(Let him continue)"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

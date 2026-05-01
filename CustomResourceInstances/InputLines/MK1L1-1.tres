@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://bmw7nq8btolp"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_58tbb"]
+
+[resource]
+script = ExtResource("1_58tbb")
+id = "MK1L1-1"
+output_line_id = "MK1OL3"
+text = "Thanks Margo, did she mention I need you to post this missing person flier in your shop?"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

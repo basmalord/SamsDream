@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://bsgdfm1huyxr5"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_6refp"]
+
+[resource]
+script = ExtResource("1_6refp")
+id = "B1OL3"
+input_lines_id_array = Array[String](["B1L2-2"])
+text_array = Array[String](["I’m not sure, Sam. He’s not answering his phone- but if he’s not here soon I’m not sure I can handle all of these customers! So hop to it!", "Have you still not found Graham yet? Come on, hop to it!", "I’m not sure, Sam. He’s not answering his phone- but if he’s not here soon I’m not sure I can handle all of these customers! So hop to it!"])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://4dplvr6ch7hx"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_4j3n3"]
+
+[resource]
+script = ExtResource("1_4j3n3")
+id = "J1L2-1"
+output_line_id = "J1OL4"
+text = "Graham’s gone missing and Lucy’s asked me to post up some fliers about town, can you take one for the gallery?"
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

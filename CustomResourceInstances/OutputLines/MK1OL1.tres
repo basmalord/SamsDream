@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://00cuq0xwfqv3"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_p7td6"]
+
+[resource]
+script = ExtResource("1_p7td6")
+id = "MK1OL1"
+input_lines_id_array = Array[String](["MK1L1-1", "MK1L1-2"])
+text_array = Array[String](["Hey Sam, Jen called ahead- so sorry to hear about Graham. You’re a real trooper helping Lucy out like this."])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

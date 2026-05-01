@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://gchei4towir5"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_d7pjm"]
+
+[resource]
+script = ExtResource("1_d7pjm")
+id = "MK1L2-1"
+text = "(Hand her the flier, silently)."
+end_dialogue = true
+changers_dict = Dictionary[String, Dictionary]({
+"MK1OL2": {
+"transform": "MK1OL02"
+},
+"grim3": {
+"is_dead": false
+},
+"grim4": {
+"is_dead": true
+}
+})
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

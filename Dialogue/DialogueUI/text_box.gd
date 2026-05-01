@@ -19,7 +19,6 @@ func display_text(text_to_display: String):
 	text = text_to_display
 	text_box_label.text = text_to_display
 	custom_minimum_size.x = min(size.x, MAX_WIDTH)
-	print("this is cms: ",custom_minimum_size.x)
 	if size.x >= MAX_WIDTH:
 		text_box_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	else:

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="InputLine" load_steps=2 format=3 uid="uid://4qperpeh655r"]
+
+[ext_resource type="Script" uid="uid://dg2snys4lnlkt" path="res://CustomResources/DialogueResources/InputLines/input_line.gd" id="1_w8qk1"]
+
+[resource]
+script = ExtResource("1_w8qk1")
+id = "MK1L3-1"
+text = "Thanks, Margo."
+end_dialogue = true
+changers_dict = Dictionary[String, Dictionary]({
+"MK1OL1": {
+"transform": "MK1OL0"
+},
+"grim3": {
+"is_dead": false
+},
+"grim4": {
+"is_dead": true
+}
+})
+metadata/_custom_type_script = "uid://dg2snys4lnlkt"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="OutputLine" load_steps=2 format=3 uid="uid://be1tbg2wp2ig3"]
+
+[ext_resource type="Script" uid="uid://fktb7g3qo4jr" path="res://CustomResources/DialogueResources/OutputLines/output_line.gd" id="1_bfuy7"]
+
+[resource]
+script = ExtResource("1_bfuy7")
+id = "B1OL4"
+text_array = Array[String](["Have you still not found Graham yet? Come on, hop to it! "])
+metadata/_custom_type_script = "uid://fktb7g3qo4jr"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://df44hbw5trstf"]
+[gd_scene load_steps=22 format=3 uid="uid://df44hbw5trstf"]
 
 [ext_resource type="Script" uid="uid://i6e1sj8fd1j4" path="res://PlayerCharacterBase/player_character_body.gd" id="1_b88be"]
 [ext_resource type="Texture2D" uid="uid://nbhvi8sj26h3" path="res://icon.svg" id="2_b7l6i"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://u7w2yjgu1jbd" path="res://Resources/SpriteSheets/sam adventure character sprite sheet2.png" id="3_rexmj"]
 [ext_resource type="PackedScene" uid="uid://mucuopy0bom2" path="res://Dialogue/DialogueUI/text_box.tscn" id="4_ufdxq"]
 [ext_resource type="PackedScene" uid="uid://dfl2es617uxbv" path="res://Dialogue/InteractiveDialogueUI/interactive_dialogue_ui.tscn" id="7_rexmj"]
+[ext_resource type="Script" uid="uid://dkdesd6a30xbb" path="res://PlayerCharacterBase/Mangers/Resource/resource_indicator_control.gd" id="8_v80kj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v80kj"]
 atlas = ExtResource("2_qnqp5")
@@ -159,3 +160,36 @@ offset_left = -160.0
 offset_top = 89.0
 offset_right = -160.0
 offset_bottom = 89.0
+
+[node name="ResourceIndicatorControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_v80kj")
+
+[node name="CoinTexture" type="TextureRect" parent="ResourceIndicatorControl"]
+layout_mode = 0
+offset_left = -167.0
+offset_top = -197.0
+offset_right = -127.0
+offset_bottom = -157.0
+
+[node name="CoinLabel" type="Label" parent="ResourceIndicatorControl/CoinTexture"]
+layout_mode = 0
+offset_left = -33.0
+offset_right = 7.0
+offset_bottom = 23.0
+
+[node name="FlierTexture" type="TextureRect" parent="ResourceIndicatorControl"]
+layout_mode = 0
+offset_left = -172.0
+offset_top = -150.0
+offset_right = -132.0
+offset_bottom = -110.0
+
+[node name="FlierLabel" type="Label" parent="ResourceIndicatorControl/FlierTexture"]
+layout_mode = 0
+offset_left = -26.0
+offset_right = 14.0
+offset_bottom = 23.0
